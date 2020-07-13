@@ -1,0 +1,11 @@
+out_f = open("myfile", "w", encoding="utf-8")
+line = input("Введи что-нибудь \n")
+while line:
+    out_f.writelines(line)
+    line = input("Введи что-нибудь \n")
+    if not line:
+        break
+out_f.close()
+content = open("myfile", "r")
+print(content)
+out_f.close()
